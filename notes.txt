@@ -69,3 +69,7 @@ aws dynamodb scan --table-name NodeJsBaseballStats --endpoint-url http://localho
 
 ----------------------------------------------------
 
+The problem with insert.js is that if some of the data json files has been corrupted (for example wrong partition key 'TeamIddd' instead of 'TeadID'), the data from the previous files would be anyway inserted into the table.
+In order to make insert operation transactionally create insertTransaction.js
+
+node insertTransaction.js
