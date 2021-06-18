@@ -34,6 +34,9 @@ aws dynamodb list-tables --endpoint-url http://localhost:8000
 
 aws dynamodb create-table --table-name LocalBaseballStats --attribute-definitions AttributeName=TeamID,AttributeType=S AttributeName=SK,AttributeType=S --key-schema AttributeName=TeamID,KeyType=HASH AttributeName=SK,KeyType=RANGE --provisioned-throughput ReadCapacityUnits=5,WriteCapacityUnits=5 --endpoint-url http://localhost:8000
 
+aws dynamodb delete-table --endpoint-url http://localhost:8000 --table-name LocalBaseballStats
+
+
 -------------------------------------------------------------------------------
 
 // create a project
@@ -47,3 +50,10 @@ npm install --save aws-sdk
 // install aws-sdk package to your project
 
 ---------------------------------------------------
+
+Create index.js
+
+node index.js
+// table created
+
+
