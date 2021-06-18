@@ -73,3 +73,12 @@ The problem with insert.js is that if some of the data json files has been corru
 In order to make insert operation transactionally create insertTransaction.js
 
 node insertTransaction.js
+
+node query.js
+
+
+-----------------------------------------------------
+
+About streams...
+
+----------------------------------------------------
