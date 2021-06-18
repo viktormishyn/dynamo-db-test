@@ -56,4 +56,16 @@ Create index.js
 node index.js
 // table created
 
+aws dynamodb scan --table-name NodeJsBaseballStats --endpoint-url http://localhost:8000
+
+---------------------------------------------------
+
+Create insert.js
+
+node insert.js
+// insert data from json files
+
+aws dynamodb scan --table-name NodeJsBaseballStats --endpoint-url http://localhost:8000
+
+----------------------------------------------------
 
