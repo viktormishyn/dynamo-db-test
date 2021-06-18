@@ -1,14 +1,14 @@
 // Create table
 
-var AWS = require("aws-sdk");
+let AWS = require("aws-sdk");
 
 AWS.config.update({
   region: "eu-central-1",
   endpoint: "http://localhost:8000",
 });
 
-var dynamodb = new AWS.DynamoDB();
-var params = {
+let dynamodb = new AWS.DynamoDB();
+let params = {
   TableName: "NodeJsBaseballStats",
   KeySchema: [
     { AttributeName: "TeamID", KeyType: "HASH" }, // PartitionKey
