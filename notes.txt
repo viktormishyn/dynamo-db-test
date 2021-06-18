@@ -1,0 +1,49 @@
+INSTALL AWS CLI
+
+sudo apt install awscli
+aws --version
+
+aws configure
+eu-central-1
+
+---------------------------------------------------------------------------------------------
+
+INSTALL DYNAMODB LOCALLY
+
+https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.DownloadingAndRunning.html
+
+mkdir ~/dynamodb
+tar xvfz ~/Downloads/dynamodb_local_latest.tar.gz -C ~/dynamodb/
+
+sudo apt install openjdk-14-jre-headless
+java -version
+
+create runDynamo.sh file in ~
+
+```
+#!/bin/bash
+
+export DYNAMODB_HOME="/home/asdf/dynamodb/"
+java -Djava.library.path=$DYNAMODB_HOME/DynamoDBLocal_lib -jar $DYNAMODB_HOME/DynamoDBLocal.jar -sharedDb
+```
+
+chmod 700
+./runDynamodb.sh
+
+aws dynamodb list-tables --endpoint-url http://localhost:8000
+
+aws dynamodb create-table --table-name LocalBaseballStats --attribute-definitions AttributeName=TeamID,AttributeType=S AttributeName=SK,AttributeType=S --key-schema AttributeName=TeamID,KeyType=HASH AttributeName=SK,KeyType=RANGE --provisioned-throughput ReadCapacityUnits=5,WriteCapacityUnits=5 --endpoint-url http://localhost:8000
+
+-------------------------------------------------------------------------------
+
+// create a project
+npm init
+package_name: dynamo-db-test
+...
+test command: jasmine
+
+
+npm install --save aws-sdk
+// install aws-sdk package to your project
+
+---------------------------------------------------

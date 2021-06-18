@@ -1,0 +1,22 @@
+{
+  "name": "dynamo-db-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viktormishyn/dynamo-db-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viktormishyn/dynamo-db-test/issues"
+  },
+  "homepage": "https://github.com/viktormishyn/dynamo-db-test#readme",
+  "dependencies": {
+    "aws-sdk": "^2.931.0"
+  }
+}
